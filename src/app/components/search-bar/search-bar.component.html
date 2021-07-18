@@ -1,6 +1,6 @@
-<form class="search-form">
-    <input type="text" name="text" class="search-input" placeholder="Enter a Destination..." required>
-    <!-- <input type="text" name="text" class="search-input-results" placeholder="Search..." required> -->
+<form class="search-form" (ngSubmit)="onSubmit()">
+    <input type="text" name="text" [(ngModel)]="text" class="search-input" placeholder="Enter a Destination...">
+    <!-- <input type="text" name="text" class="search-input-results" placeholder="Search..." > -->
     <fa-icon [icon]="faSearch" class="icon"></fa-icon>
     <!-- <fa-icon [icon]="faSearch" class="icon-results"></fa-icon> -->
     <app-search-button></app-search-button>

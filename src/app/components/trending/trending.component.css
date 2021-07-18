@@ -15,7 +15,6 @@
 .trending-items {
   margin: 9px auto;
   width: 1117px;
-  height: 520px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
