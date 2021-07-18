@@ -1,0 +1,33 @@
+.btn {
+  width: 90px;
+  height: 44px;
+  background: linear-gradient(
+    117deg,
+    rgba(255, 97, 97, 1) 0%,
+    rgba(255, 97, 163, 1) 100%
+  );
+  border: 0;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 900;
+  box-shadow: 0px 2px 4px 0px #000000;
+  cursor: pointer;
+}
+
+.btn-result {
+  width: 64.8px;
+  height: 31.53px;
+  background: linear-gradient(
+    117deg,
+    rgba(255, 97, 97, 1) 0%,
+    rgba(255, 97, 163, 1) 100%
+  );
+  border: 0;
+  border-radius: 21.6px;
+  color: #ffffff;
+  font-size: 15.12px;
+  font-weight: 900;
+  box-shadow: 0px 2px 3px 0px #000000;
+  cursor: pointer;
+}
