@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule,Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
@@ -15,14 +15,13 @@ import { ResultsComponent } from './components/results/results.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
 
-
 const appRoutes: Routes = [
   {
     path: '',
     component: SearchComponent,
   },
   {
-    path: 'results',
+    path: 'results/:id',
     component: ResultsComponent,
   },
 ];
@@ -37,7 +36,7 @@ const appRoutes: Routes = [
     SearchComponent,
     ResultsComponent,
     PostsComponent,
-    PostItemComponent
+    PostItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +44,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
     FontAwesomeModule,
-
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

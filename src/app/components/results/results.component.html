@@ -7,8 +7,8 @@
             <app-search-bar></app-search-bar>
         </div>
         <div class="content">
-            <p class="title">Rome</p>
-            <p class="sub-title">Italy</p>
+            <p class="title">{{destination.city}}</p>
+            <p class="sub-title">{{destination.country_name}}</p>
         </div>
     </div>
     <div class="desc">
@@ -18,7 +18,7 @@
             inventore et nihil placeat dolores quae rem excepturi repellendus, in officiis sapiente consequatur minus ab
             fugit debitis!</p>
     </div>
-    <app-posts></app-posts>
+    <app-posts [activities]="activities"></app-posts>
     <div class="find-trip">
         <h1>Find a trip to Rome</h1>
         <p>Tap the lucky button to get started...</p>
