@@ -5,8 +5,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  box-shadow: -1px -20px 86px 40px rgba(33, 31, 42, 1);
   position: relative;
-  box-shadow: -1px -20px 86px 0px rgba(33, 31, 42, 1) inset;
 }
 
 .logo {

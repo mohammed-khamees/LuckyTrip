@@ -1,7 +1,7 @@
 .posts {
   width: 100%;
   background-color: rgb(33, 31, 42);
-  box-shadow: 0px -5px 80px 60px rgba(33, 31, 42, 1);
+  box-shadow: 0px -30px 80px 50px rgba(33, 31, 42, 1);
   border: none;
   position: relative;
 }

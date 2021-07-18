@@ -1,12 +1,12 @@
 <div class="container">
     <div class="banner">
-        <div class="logo">
+        <a routerLink="/" class="logo">
             <img src='./../../assets/images/LuckyTrip_Logo.png' alt="LuckyTrip_Logo">
-        </div>
+        </a>
         <div class="search-container">
-            <app-search-bar></app-search-bar>
+            <app-search-bar (onSearchSubmit)='search($event)'></app-search-bar>
         </div>
-        <div class="content">
+        <div class="content" *ngIf='destination'>
             <p class="title">{{destination.city}}</p>
             <p class="sub-title">{{destination.country_name}}</p>
         </div>

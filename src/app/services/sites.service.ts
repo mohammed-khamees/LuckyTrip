@@ -12,7 +12,7 @@ export class SitesService {
 
   getDestinations(
     search_value: string,
-    search_type: string = 'city'
+    search_type: string = 'none'
   ): Observable<any> {
     return this.http.get<any>(
       `${this.apiUrl}?search_type=${search_type}&search_value=${search_value}`

@@ -7,7 +7,6 @@ import { SitesService } from './../../services/sites.service';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  @Output() onSearch = new EventEmitter();
   destination: string;
   destinations: any[];
 
@@ -16,10 +15,18 @@ export class SearchComponent implements OnInit {
     this.destination = '';
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sitesService
+      .getDestinations('')
+      .subscribe(({ destinations }) => (this.destinations = destinations));
+  }
 
   search(destination: string) {
     this.destination = destination;
-    this.onSearch.emit(destination);
+    this.sitesService
+      .getDestinations(this.destination, 'city')
+      .subscribe(({ destinations }) => {
+        this.destinations = destinations;
+      });
   }
 }

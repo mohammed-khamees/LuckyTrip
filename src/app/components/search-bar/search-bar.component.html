@@ -5,8 +5,8 @@
 </form>
 
 
-<form class="search-form-results" (ngSubmit)="onSubmit()" *ngIf="hasRoute('/results')">
-    <input type="text" name="text" class="search-input-results" placeholder="Search...">
+<form class="search-form-results" (ngSubmit)="onSubmit()" *ngIf="!hasRoute('/')">
+    <input type="text" name="text" [(ngModel)]="text" class="search-input-results" placeholder="Search...">
     <fa-icon [icon]="faSearch" class="icon-results"></fa-icon>
     <app-search-button></app-search-button>
 </form>

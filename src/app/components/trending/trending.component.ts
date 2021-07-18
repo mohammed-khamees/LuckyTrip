@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SitesService } from './../../services/sites.service';
 
 @Component({
   selector: 'app-trending',
@@ -7,17 +6,11 @@ import { SitesService } from './../../services/sites.service';
   styleUrls: ['./trending.component.css'],
 })
 export class TrendingComponent implements OnInit {
-  @Input() destination: string;
-  destinations: any[];
+  @Input() destinations: any[];
 
-  constructor(private sitesService: SitesService) {
+  constructor() {
     this.destinations = [];
-    this.destination = '';
   }
 
-  ngOnInit(): void {
-    this.sitesService
-      .getDestinations('')
-      .subscribe(({ destinations }) => (this.destinations = destinations));
-  }
+  ngOnInit(): void {}
 }
