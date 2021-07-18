@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-bar',
@@ -11,7 +12,7 @@ export class SearchBarComponent implements OnInit {
   faSearch = faSearch;
   text: string;
 
-  constructor() {
+  constructor(private router: Router) {
     this.text = '';
   }
 
@@ -24,5 +25,9 @@ export class SearchBarComponent implements OnInit {
 
     this.onSearchSubmit.emit(this.text);
     this.text = '';
+  }
+
+  hasRoute(route: string) {
+    return this.router.url === route;
   }
 }

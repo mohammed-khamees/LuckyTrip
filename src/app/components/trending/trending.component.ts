@@ -16,8 +16,6 @@ export class TrendingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.destination);
-
     this.sitesService
       .getDestinations('')
       .subscribe(({ destinations }) => (this.destinations = destinations));

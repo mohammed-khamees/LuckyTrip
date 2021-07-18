@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { SitesService } from './../../services/sites.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { SitesService } from './../../services/sites.service';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
+  @Output() onSearch = new EventEmitter();
   destination: string;
   destinations: any[];
 
@@ -18,10 +19,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {}
 
   search(destination: string) {
-    console.log(destination);
-
-    this.sitesService
-      .getDestinations(destination)
-      .subscribe(({ destinations }) => (this.destinations = destinations));
+    this.destination = destination;
+    this.onSearch.emit(destination);
   }
 }

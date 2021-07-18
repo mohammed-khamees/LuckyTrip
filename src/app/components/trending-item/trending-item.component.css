@@ -6,6 +6,7 @@
   border-radius: 10px;
   position: relative;
   cursor: pointer;
+  display: block;
 }
 
 .trending-item img {

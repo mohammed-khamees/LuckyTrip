@@ -1,1 +1,3 @@
-<input type="submit" value="GO" class="btn">
+<input type="submit" value="GO" class="btn" *ngIf="hasRoute('/')">
+
+<input type="submit" value="GO" class="btn-result" *ngIf="hasRoute('/results')">
