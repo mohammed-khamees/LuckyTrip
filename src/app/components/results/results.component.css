@@ -75,3 +75,40 @@
   font-weight: 400;
   width: 1118px;
 }
+
+.find-trip {
+  background-color: rgb(33, 31, 42);
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 67px;
+  padding-bottom: 140.02px;
+  text-align: center;
+}
+
+.find-trip h1 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ff7b99;
+  margin-bottom: 9px;
+}
+
+.find-trip p {
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40.91px;
+}
+
+.lucky-btn {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.lucky-btn img {
+  margin: 0 auto;
+  width: 109.27px;
+  height: 113.07px;
+}

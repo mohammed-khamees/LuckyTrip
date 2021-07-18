@@ -10,10 +10,11 @@
   color: #7bfbff;
   margin-left: 160px;
   padding-top: 180px;
+  margin-bottom: 9px;
 }
 
 .posts-items {
-  margin: 9px auto;
+  margin: 0 auto;
   width: 1117px;
   display: flex;
   align-items: center;
