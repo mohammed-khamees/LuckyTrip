@@ -28,6 +28,10 @@
   font-size: 21px;
 }
 
+.search-input:focus {
+  background-color: transparent;
+}
+
 .icon {
   font-size: 25px;
   color: #ffffff;
