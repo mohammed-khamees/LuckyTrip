@@ -1,0 +1,22 @@
+.trending {
+  width: 100%;
+  background-color: rgb(33, 31, 42);
+  box-shadow: 0px -5px 80px 60px rgba(33, 31, 42, 1);
+  border: none;
+  position: relative;
+}
+
+.trending-title {
+  color: #7bfbff;
+  margin-left: 160px;
+  padding-top: 40px;
+}
+
+.trending-items {
+  margin: 9px auto;
+  width: 1117px;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
