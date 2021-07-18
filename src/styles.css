@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: AvenirBook;
+  src: url(./assets/fonts/AvenirLTStd-Book.otf) format("truetype");
+}
+
+@font-face {
+  font-family: AvenirBlack;
+  src: url(./assets/fonts/AvenirLTStd-Black.otf) format("truetype");
+}
+
+@font-face {
+  font-family: AvenirRoman;
+  src: url(./assets/fonts/AvenirLTStd-Roman.otf) format("truetype");
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: AvenirBook;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,li {
+  list-style: none;
+}
