@@ -44,6 +44,7 @@
 .sub-title {
   font-size: 29px;
   opacity: 80%;
+  font-weight: 900;
 }
 
 .search-container {
@@ -65,11 +66,12 @@
   color: #ffed7b;
   font-size: 32px;
   font-weight: 900;
-  margin-bottom: 9px;
+  margin-bottom: 22px;
 }
 
 .desc-content {
   color: white;
   font-size: 24px;
   font-weight: 400;
+  width: 1118px;
 }
