@@ -1,1 +1,7 @@
-<p>search-bar works!</p>
+<form class="search-form">
+    <input type="text" name="text" class="search-input" placeholder="Enter a Destination..." required>
+    <!-- <input type="text" name="text" class="search-input-results" placeholder="Search..." required> -->
+    <fa-icon [icon]="faSearch" class="icon"></fa-icon>
+    <!-- <fa-icon [icon]="faSearch" class="icon-results"></fa-icon> -->
+    <app-search-button></app-search-button>
+</form>
