@@ -1,6 +1,8 @@
 <div class="posts">
-    <h1 class="posts-title">Blog Posts</h1>
-    <div class="posts-items">
-        <app-post-item *ngFor='let activitie of activities' [activitie]="activitie"></app-post-item>
+    <div class="posts-container">
+        <h1 class="posts-title">Blog Posts</h1>
+        <div class="posts-items">
+            <app-post-item *ngFor='let activitie of activities' [activitie]="activitie"></app-post-item>
+        </div>
     </div>
 </div>

@@ -4,11 +4,13 @@
   box-shadow: 0px -30px 80px 50px rgba(33, 31, 42, 1);
   border: none;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .posts-title {
   color: #7bfbff;
-  margin-left: 160px;
   padding-top: 180px;
   margin-bottom: 9px;
 }

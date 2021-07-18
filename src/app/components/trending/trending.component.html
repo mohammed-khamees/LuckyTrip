@@ -1,6 +1,8 @@
 <div class="trending">
-    <h1 class="trending-title">Trending</h1>
-    <div class="trending-items">
-        <app-trending-item *ngFor='let destination of destinations' [destination]="destination"></app-trending-item>
+    <div class="trending-container">
+        <h1 class="trending-title">Trending</h1>
+        <div class="trending-items">
+            <app-trending-item *ngFor='let destination of destinations' [destination]="destination"></app-trending-item>
+        </div>
     </div>
 </div>

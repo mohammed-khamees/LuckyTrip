@@ -5,11 +5,13 @@
   border: none;
   position: relative;
   min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .trending-title {
   color: #7bfbff;
-  margin-left: 160px;
   padding-top: 40px;
   margin-bottom: 9px;
 }
