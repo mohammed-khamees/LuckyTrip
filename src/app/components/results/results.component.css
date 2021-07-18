@@ -1,12 +1,24 @@
 .banner {
   width: 100%;
   height: 450px;
+  background-color: black;
+  position: relative;
+  box-shadow: -1px -20px 86px 0px rgba(33, 31, 42, 1) inset;
+}
+
+.banner::before {
+  content: "";
   background-image: url(https://devapi.luckytrip.co.uk/images/destinations/86.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: relative;
-  box-shadow: -1px -20px 86px 0px rgba(33, 31, 42, 1) inset;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.65;
 }
 
 .logo {
