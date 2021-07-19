@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SiteService } from './../../services/site.service';
 import { SitesService } from './../../services/sites.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-results',
@@ -16,7 +16,8 @@ export class ResultsComponent implements OnInit {
   constructor(
     private sitesService: SitesService,
     private siteService: SiteService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -35,8 +36,6 @@ export class ResultsComponent implements OnInit {
     this.sitesService
       .getDestinations(this.destination, 'city')
       .subscribe(({ destinations }) => {
-        console.log(destinations);
-
         this.destination = destinations[0];
         this.id = destinations[0].id;
       });
@@ -46,6 +45,8 @@ export class ResultsComponent implements OnInit {
       .subscribe(({ destination, activities }) => {
         this.destination = destination;
         this.activities = activities;
+        const navigationDetails: string[] = [`/results/${this.id}`];
+        this.router.navigate(navigationDetails);
       });
   }
 }
