@@ -8,17 +8,19 @@ import { SitesService } from './../../services/sites.service';
 })
 export class SearchComponent implements OnInit {
   destination: string;
-  destinations: any[];
+  destinations: any;
+  loading: boolean = false;
 
   constructor(private sitesService: SitesService) {
-    this.destinations = [];
     this.destination = '';
+    this.loading = false;
   }
 
   ngOnInit(): void {
-    this.sitesService
-      .getDestinations('')
-      .subscribe(({ destinations }) => (this.destinations = destinations));
+    this.sitesService.getDestinations('').subscribe(({ destinations }) => {
+      this.destinations = destinations;
+      this.loading = true;
+    });
   }
 
   search(destination: string) {
@@ -26,7 +28,9 @@ export class SearchComponent implements OnInit {
     this.sitesService
       .getDestinations(this.destination, 'city')
       .subscribe(({ destinations }) => {
-        this.destinations = destinations;
+        if (destinations.length) this.destinations = destinations;
+        else this.destinations = 'No Destinations Found!';
+        this.loading = true;
       });
   }
 }

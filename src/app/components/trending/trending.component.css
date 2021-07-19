@@ -19,7 +19,16 @@
 .trending-items {
   margin: 9px auto;
   width: 1117px;
+  min-height: 550px;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+}
+
+.failed {
+  color: white;
+  width: 1117px;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

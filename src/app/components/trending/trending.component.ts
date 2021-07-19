@@ -7,9 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TrendingComponent implements OnInit {
   @Input() destinations: any[];
+  @Input() loading: boolean;
 
   constructor() {
     this.destinations = [];
+    this.loading = false;
   }
 
   ngOnInit(): void {}

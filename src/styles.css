@@ -57,3 +57,17 @@ li {
   opacity: 80%;
   font-weight: 900;
 }
+
+.load {
+  color: white;
+  width: 1117px;
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load img {
+  width: 100px;
+  height: 100px;
+}

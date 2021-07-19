@@ -1,8 +1,19 @@
 <div class="trending">
     <div class="trending-container">
-        <h1 class="trending-title">Trending</h1>
-        <div class="trending-items">
+        <h1 class="trending-title" *ngIf='loading; else load'>Trending</h1>
+
+        <div class="trending-items" *ngIf='destinations[0].city; else failed'>
             <app-trending-item *ngFor='let destination of destinations' [destination]="destination"></app-trending-item>
         </div>
+
+        <ng-template #failed>
+            <h1 class="failed">{{destinations}}</h1>
+        </ng-template>
+
+
+        <ng-template #load>
+            <div class="load"><img src="./../../../assets/images/loading.gif" alt="loading">
+            </div>
+        </ng-template>
     </div>
 </div>
